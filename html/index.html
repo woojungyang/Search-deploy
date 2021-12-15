@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/lodash.min.js"></script>
+	<script src="../js/axios.min.js"></script>
+	<script src="../js/masonry.pkgd.min.js"></script>
+	<script src="../js/imagesloaded.pkgd.min.js"></script>
+	<script src="../js/util.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="logo text-center fa-2x py-4 text-primary">
+			<i class="fa fa-search"></i> FIND ALL
+		</h1>
+		<form class="search-form form-inline mb-5">
+			<select name="category" class="form-control mr-2">
+				<option value="web" selected>웹사이트</option>
+				<option value="blog">블로그</option>
+				<option value="image">이미지</option>
+				<option value="vclip">동영상</option>
+				<option value="book">도서</option>
+				<option value="cafe">카페</option>
+			</select>
+			<input type="text" class="form-control mr-2 flex-grow-1" name="query" autofocus value="COVID-19">
+			<button class="btn btn-primary">검색</button>
+		</form>
+		<h2 class="text-right mb-3">검색결과: <span class="result-cnt font-weight-bold"></span>건</h2>
+		<ul class="lists book">
+			
+		</ul>
+		<div class="pager-wrap" style="display: none;">
+			<button class="bt-first fa fa-arrow-left" data-page="1" disabled></button>
+			<button class="bt-pager-prev fa fa-angle-double-left" disabled></button>
+			<button class="bt-prev fa fa-angle-left" disabled></button>
+			<button class="bt-next fa fa-angle-right" disabled></button>
+			<button class="bt-pager-next fa fa-angle-double-right" disabled></button>
+			<button class="bt-last fa fa-arrow-right" disabled></button>
+		</div>
+	</div>
+	<div class="modal-wrapper" style="display: none;">
+		<div class="modal-wrap">
+			<div class="img-wp">
+				<img src="http://via.placeholder.com/100" class="w100" onerror="onLoadError(this);">
+				<i class="bt-close fa fa-times" onclick="$('.modal-wrapper').hide();"></i>
+			</div>
+			<div class="p-3">
+				<div class="size-wp mb-2"></div>
+				<div class="name-wp mb-2">
+					<span class="collection"></span>
+					<span class="name"></span>
+				</div>
+				<a class="link mb-2" target="_blank"></a>
+				<div class="dt"></div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/index.js"></script>
+</body>
+</html>
